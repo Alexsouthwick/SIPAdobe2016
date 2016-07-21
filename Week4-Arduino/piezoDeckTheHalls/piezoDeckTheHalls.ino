@@ -39,218 +39,197 @@ bool staccato = true;
 
 void setup() {
   pinMode(piezo_pin, OUTPUT);
-//    int verse_1[17][2]= {{note_Bb4, dotted_quarter}, {note_Ab4, eighth_note},{note_G4, quarter_note},
-//    {note_F4, quarter_note},{note_Eb4, quarter_note}, {note_F4, quarter_note},
-//    {note_G4, quarter_note},{note_Eb4, quarter_note}, {note_F4, eighth_note},
-//    {note_G4, eighth_note},{note_Ab4, eighth_note},{note_F4, eighth_note},{note_G4, dotted_quarter},
-//    {note_F4, eighth_note},{note_Eb4, quarter_note},{note_D4, quarter_note},{note_Eb4, half_note}};
-//
-//    int verse_2[17][2]= {{ note_F4, dotted_quarter},{note_G4, eighth_note},{note_Ab4, quarter_note},{note_F4, quarter_note},
-//    {note_G4, dotted_quarter},{note_Ab4, eighth_note},{note_Bb4, quarter_note},{note_F4, quarter_note},{note_G4, eighth_note}, 
-//    {note_A4, eighth_note},{note_Bb4, quarter_note},{note_C5, eighth_note},{note_D5, eighth_note},{note_Eb5, quarter_note},
-//    {note_D5, quarter_note},{note_C5, quarter_note},{note_Bb4, half_note}};
-// 
-//    int verse_3[18][2]= {{note_Bb4, dotted_quarter}, {note_Ab4, eighth_note},{note_G4, quarter_note},
-//    {note_F4, quarter_note},{note_Eb4, quarter_note}, {note_F4, quarter_note},
-//    {note_G4, quarter_note},{note_Eb4, quarter_note}, {note_C5, eighth_note},{note_C5, eighth_note},{note_C5, eighth_note},
-//    {note_C5, eighth_note},{note_Bb4, dotted_quarter},{ note_Ab4, eighth_note},
-//    {note_G4, quarter_note},{note_F4, quarter_note},{note_Eb4, half_note}};
   Serial.begin(9600);
 }
 
 
 
 void loop() {
-//  int verse_1[17][2]= {{note_Bb4, dotted_quarter}, {note_Ab4, eighth_note},{note_G4, quarter_note},
-//  {note_F4, quarter_note},{note_Eb4, quarter_note}, {note_F4, quarter_note},
-//  {note_G4, quarter_note},{note_Eb4, quarter_note}, {note_F4, eighth_note},
-//  {note_G4, eighth_note},{note_Ab4, eighth_note},{note_F4, eighth_note},{note_G4, dotted_quarter},
-//  {note_F4, eighth_note},{note_Eb4, quarter_note},{note_D4, quarter_note},{note_Eb4, half_note}};
-//
-//  int verse_2[17][2]= {{ note_F4, dotted_quarter},{note_G4, eighth_note},{note_Ab4, quarter_note},{note_F4, quarter_note},
-//  {note_G4, dotted_quarter},{note_Ab4, eighth_note},{note_Bb4, quarter_note},{note_F4, quarter_note},{note_G4, eighth_note},
-//  {note_A4, eighth_note},{note_Bb4, quarter_note},{note_C5, eighth_note},{note_D5, eighth_note},{note_Eb5, quarter_note},
-//  {note_D5, quarter_note},{note_C5, quarter_note},{note_Bb4, half_note}};
-//
-//  int verse_3[18][2]= {{note_Bb4, dotted_quarter}, {note_Ab4, eighth_note},{note_G4, quarter_note},
-//  {note_F4, quarter_note},{note_Eb4, quarter_note}, {note_F4, quarter_note},
-//  {note_G4, quarter_note},{note_Eb4, quarter_note}, {note_C5, eighth_note},{note_C5, eighth_note},{note_C5, eighth_note},
-//  {note_C5, eighth_note},{note_Bb4, dotted_quarter},{ note_Ab4, eighth_note},
-//  {note_G4, quarter_note},{note_F4, quarter_note},{note_Eb4, half_note}};
-//  
-//  for (int i=0; i<3; i++){
-//    Serial.print("First Loop");
-//    Serial.println(i);
-//    
-//    for (int note=0; note< sizeof(verse_1)-1; note++){
-//      int frequency= verse_1[note][0];
-//      int duration= verse_1[note][1];
-//      Serial.print("note: ");
-//      Serial.println(note);
-//      tone(piezo_pin, frequency, duration);
-//      delay(duration);
-//     }
-//   }
-//
-//   for (int note=0; note< sizeof(verse_2)-1; note++){
-//      int frequency2= verse_2[note][0];
-//      int duration2= verse_2[note][1];
-//      tone(piezo_pin, frequency2, duration2);
-//      delay(duration2);}
-//
-//   for (int note=0; note< sizeof(verse_3)-1; note++){
-//      int frequency3= verse_3[note][0];
-//      int duration3= verse_3[note][1];
-//      tone(piezo_pin, frequency3, duration3);
-//      delay(duration3);}
+  int verse_1[17][2]= {{note_Bb4, dotted_quarter}, {note_Ab4, eighth_note},{note_G4, quarter_note},
+  {note_F4, quarter_note},{note_Eb4, quarter_note}, {note_F4, quarter_note},
+  {note_G4, quarter_note},{note_Eb4, quarter_note}, {note_F4, eighth_note},
+  {note_G4, eighth_note},{note_Ab4, eighth_note},{note_F4, eighth_note},{note_G4, dotted_quarter},
+  {note_F4, eighth_note},{note_Eb4, quarter_note},{note_D4, quarter_note},{note_Eb4, half_note}};
+
+  int verse_2[17][2]= {{ note_F4, dotted_quarter},{note_G4, eighth_note},{note_Ab4, quarter_note},{note_F4, quarter_note},
+  {note_G4, dotted_quarter},{note_Ab4, eighth_note},{note_Bb4, quarter_note},{note_F4, quarter_note},{note_G4, eighth_note},
+  {note_A4, eighth_note},{note_Bb4, quarter_note},{note_C5, eighth_note},{note_D5, eighth_note},{note_Eb5, quarter_note},
+  {note_D5, quarter_note},{note_C5, quarter_note},{note_Bb4, half_note}};
+
+  int verse_3[18][2]= {{note_Bb4, dotted_quarter}, {note_Ab4, eighth_note},{note_G4, quarter_note},
+  {note_F4, quarter_note},{note_Eb4, quarter_note}, {note_F4, quarter_note},
+  {note_G4, quarter_note},{note_Eb4, quarter_note}, {note_C5, eighth_note},{note_C5, eighth_note},{note_C5, eighth_note},
+  {note_C5, eighth_note},{note_Bb4, dotted_quarter},{ note_Ab4, eighth_note},
+  {note_G4, quarter_note},{note_F4, quarter_note},{note_Eb4, half_note}};
+
+  for (int note=0; note< 16; note++){
+      int frequency= verse_1[note][0];
+      int duration= verse_1[note][1];
+      tone(piezo_pin, frequency, duration);
+      delay(duration);
+      }
+
+  for (int note=0; note< 16; note++){
+      int frequency2= verse_2[note][0];
+      int duration2= verse_2[note][1];
+      tone(piezo_pin, frequency2, duration2);
+      delay(duration2);
+      }
+
+   for (int note=0; note< 17; note++){
+      int frequency3= verse_3[note][0];
+      int duration3= verse_3[note][1];
+      tone(piezo_pin, frequency3, duration3);
+      delay(duration3);
+      }
   //verse1
-  tone(piezo_pin, note_Bb4, dotted_quarter);
-  delay(600);
-  tone(piezo_pin, note_Ab4, eighth_note);
-  delay(200);
-  tone(piezo_pin, note_G4, quarter_note);
-  delay(400);
-  tone(piezo_pin, note_F4, quarter_note);
-  delay(400);
-  tone(piezo_pin, note_Eb4, quarter_note);
-  delay(400);
-  tone(piezo_pin, note_F4, quarter_note);
-  delay(400);
-  tone(piezo_pin, note_G4, quarter_note);
-  delay(400);
-  tone(piezo_pin, note_Eb4, quarter_note);
-  delay(400);
-  tone(piezo_pin, note_F4, eighth_note);
-  delay(200);
-  tone(piezo_pin, note_G4, eighth_note);
-  delay(200);
-  tone(piezo_pin, note_Ab4, eighth_note);
-  delay(200);
-  tone(piezo_pin, note_F4, eighth_note);
-  delay(200);
-  tone(piezo_pin, note_G4, dotted_quarter);
-  delay(600);
-  tone(piezo_pin, note_F4, eighth_note);
-  delay(200);
-  tone(piezo_pin, note_Eb4, quarter_note);
-  delay(400);
-  tone(piezo_pin, note_D4, quarter_note);
-  delay(400);
-  tone(piezo_pin, note_Eb4, half_note);
-  delay(800);
-
-  tone(piezo_pin, note_Bb4, dotted_quarter);
-  delay(600);
-  tone(piezo_pin, note_Ab4, eighth_note);
-  delay(200);
-  tone(piezo_pin, note_G4, quarter_note);
-  delay(400);
-  tone(piezo_pin, note_F4, quarter_note);
-  delay(400);
-  tone(piezo_pin, note_Eb4, quarter_note);
-  delay(400);
-  tone(piezo_pin, note_F4, quarter_note);
-  delay(400);
-  tone(piezo_pin, note_G4, quarter_note);
-  delay(400);
-  tone(piezo_pin, note_Eb4, quarter_note);
-  delay(400);
-  tone(piezo_pin, note_F4, eighth_note);
-  delay(200);
-  tone(piezo_pin, note_G4, eighth_note);
-  delay(200);
-  tone(piezo_pin, note_Ab4, eighth_note);
-  delay(200);
-  tone(piezo_pin, note_F4, eighth_note);
-  delay(200);
-  tone(piezo_pin, note_G4, dotted_quarter);
-  delay(600);
-  tone(piezo_pin, note_F4, eighth_note);
-  delay(200);
-  tone(piezo_pin, note_Eb4, quarter_note);
-  delay(400);
-  tone(piezo_pin, note_D4, quarter_note);
-  delay(400);
-  tone(piezo_pin, note_Eb4, half_note);
-  delay(800);
-
-
-//  //verse2
-  tone(piezo_pin, note_F4, dotted_quarter);
-  delay(600);
-  tone(piezo_pin, note_G4, eighth_note);
-  delay(200);
-  tone(piezo_pin, note_Ab4, quarter_note);
-  delay(400);
-  tone(piezo_pin, note_F4, quarter_note);
-  delay(400);
-  tone(piezo_pin, note_G4, dotted_quarter);
-  delay(600);
-  tone(piezo_pin, note_Ab4, eighth_note);
-  delay(200);
-  tone(piezo_pin, note_Bb4, quarter_note);
-  delay(400); 
-  tone(piezo_pin, note_F4, quarter_note);
-  delay(400);
-  tone(piezo_pin, note_G4, eighth_note);
-  delay(200);
-  tone(piezo_pin, note_A4, eighth_note);
-  delay(200); 
-  tone(piezo_pin, note_Bb4, quarter_note);
-  delay(400);  
-  tone(piezo_pin, note_C5, eighth_note);
-  delay(200);
-  tone(piezo_pin, note_D5, eighth_note); 
-  delay(200); 
-  tone(piezo_pin, note_Eb5, quarter_note);
-  delay(400); 
-  tone(piezo_pin, note_D5, quarter_note);
-  delay(400);
-  tone(piezo_pin, note_C5, quarter_note);
-  delay(400);
-  tone(piezo_pin, note_Bb4, half_note);
-  delay(800);
-
-
-
-  
-//  //verse3
-    tone(piezo_pin, note_Bb4, dotted_quarter);
-    delay(600);
-    tone(piezo_pin, note_Ab4, eighth_note);
-    delay(200);
-    tone(piezo_pin, note_G4, quarter_note);
-    delay(400);
-    tone(piezo_pin, note_F4, quarter_note);
-    delay(400);
-    tone(piezo_pin, note_Eb4, quarter_note);
-    delay(400);
-    tone(piezo_pin, note_F4, quarter_note);
-    delay(400);
-    tone(piezo_pin, note_G4, quarter_note);
-    delay(400);
-    tone(piezo_pin, note_Eb4, quarter_note);
-    delay(400);
-    tone(piezo_pin, note_C5, eighth_note);
-    delay(200);
-    tone(piezo_pin, note_C5, eighth_note);
-    delay(200);
-    tone(piezo_pin, note_C5, eighth_note); 
-    delay(200);
-    tone(piezo_pin, note_C5, eighth_note);
-    delay(200);
-    tone(piezo_pin, note_Bb4, dotted_quarter);
-    delay(600);
-    tone(piezo_pin, note_Ab4, eighth_note); 
-    delay(200);  
-    tone(piezo_pin, note_G4, quarter_note);
-    delay(400);
-    tone(piezo_pin, note_F4, quarter_note);
-    delay(400);
-    tone(piezo_pin, note_Eb4, half_note);  
-    delay(3000);
-
-  
- 
+//  tone(piezo_pin, note_Bb4, dotted_quarter);
+//  delay(600);
+//  tone(piezo_pin, note_Ab4, eighth_note);
+//  delay(200);
+//  tone(piezo_pin, note_G4, quarter_note);
+//  delay(400);
+//  tone(piezo_pin, note_F4, quarter_note);
+//  delay(400);
+//  tone(piezo_pin, note_Eb4, quarter_note);
+//  delay(400);
+//  tone(piezo_pin, note_F4, quarter_note);
+//  delay(400);
+//  tone(piezo_pin, note_G4, quarter_note);
+//  delay(400);
+//  tone(piezo_pin, note_Eb4, quarter_note);
+//  delay(400);
+//  tone(piezo_pin, note_F4, eighth_note);
+//  delay(200);
+//  tone(piezo_pin, note_G4, eighth_note);
+//  delay(200);
+//  tone(piezo_pin, note_Ab4, eighth_note);
+//  delay(200);
+//  tone(piezo_pin, note_F4, eighth_note);
+//  delay(200);
+//  tone(piezo_pin, note_G4, dotted_quarter);
+//  delay(600);
+//  tone(piezo_pin, note_F4, eighth_note);
+//  delay(200);
+//  tone(piezo_pin, note_Eb4, quarter_note);
+//  delay(400);
+//  tone(piezo_pin, note_D4, quarter_note);
+//  delay(400);
+//  tone(piezo_pin, note_Eb4, half_note);
+//  delay(800);
+//
+//  tone(piezo_pin, note_Bb4, dotted_quarter);
+//  delay(600);
+//  tone(piezo_pin, note_Ab4, eighth_note);
+//  delay(200);
+//  tone(piezo_pin, note_G4, quarter_note);
+//  delay(400);
+//  tone(piezo_pin, note_F4, quarter_note);
+//  delay(400);
+//  tone(piezo_pin, note_Eb4, quarter_note);
+//  delay(400);
+//  tone(piezo_pin, note_F4, quarter_note);
+//  delay(400);
+//  tone(piezo_pin, note_G4, quarter_note);
+//  delay(400);
+//  tone(piezo_pin, note_Eb4, quarter_note);
+//  delay(400);
+//  tone(piezo_pin, note_F4, eighth_note);
+//  delay(200);
+//  tone(piezo_pin, note_G4, eighth_note);
+//  delay(200);
+//  tone(piezo_pin, note_Ab4, eighth_note);
+//  delay(200);
+//  tone(piezo_pin, note_F4, eighth_note);
+//  delay(200);
+//  tone(piezo_pin, note_G4, dotted_quarter);
+//  delay(600);
+//  tone(piezo_pin, note_F4, eighth_note);
+//  delay(200);
+//  tone(piezo_pin, note_Eb4, quarter_note);
+//  delay(400);
+//  tone(piezo_pin, note_D4, quarter_note);
+//  delay(400);
+//  tone(piezo_pin, note_Eb4, half_note);
+//  delay(800);
+//
+//
+////  //verse2
+//  tone(piezo_pin, note_F4, dotted_quarter);
+//  delay(600);
+//  tone(piezo_pin, note_G4, eighth_note);
+//  delay(200);
+//  tone(piezo_pin, note_Ab4, quarter_note);
+//  delay(400);
+//  tone(piezo_pin, note_F4, quarter_note);
+//  delay(400);
+//  tone(piezo_pin, note_G4, dotted_quarter);
+//  delay(600);
+//  tone(piezo_pin, note_Ab4, eighth_note);
+//  delay(200);
+//  tone(piezo_pin, note_Bb4, quarter_note);
+//  delay(400); 
+//  tone(piezo_pin, note_F4, quarter_note);
+//  delay(400);
+//  tone(piezo_pin, note_G4, eighth_note);
+//  delay(200);
+//  tone(piezo_pin, note_A4, eighth_note);
+//  delay(200); 
+//  tone(piezo_pin, note_Bb4, quarter_note);
+//  delay(400);  
+//  tone(piezo_pin, note_C5, eighth_note);
+//  delay(200);
+//  tone(piezo_pin, note_D5, eighth_note); 
+//  delay(200); 
+//  tone(piezo_pin, note_Eb5, quarter_note);
+//  delay(400); 
+//  tone(piezo_pin, note_D5, quarter_note);
+//  delay(400);
+//  tone(piezo_pin, note_C5, quarter_note);
+//  delay(400);
+//  tone(piezo_pin, note_Bb4, half_note);
+//  delay(800);
+//
+//
+//
+//  
+////  //verse3
+//    tone(piezo_pin, note_Bb4, dotted_quarter);
+//    delay(600);
+//    tone(piezo_pin, note_Ab4, eighth_note);
+//    delay(200);
+//    tone(piezo_pin, note_G4, quarter_note);
+//    delay(400);
+//    tone(piezo_pin, note_F4, quarter_note);
+//    delay(400);
+//    tone(piezo_pin, note_Eb4, quarter_note);
+//    delay(400);
+//    tone(piezo_pin, note_F4, quarter_note);
+//    delay(400);
+//    tone(piezo_pin, note_G4, quarter_note);
+//    delay(400);
+//    tone(piezo_pin, note_Eb4, quarter_note);
+//    delay(400);
+//    tone(piezo_pin, note_C5, eighth_note);
+//    delay(200);
+//    tone(piezo_pin, note_C5, eighth_note);
+//    delay(200);
+//    tone(piezo_pin, note_C5, eighth_note); 
+//    delay(200);
+//    tone(piezo_pin, note_C5, eighth_note);
+//    delay(200);
+//    tone(piezo_pin, note_Bb4, dotted_quarter);
+//    delay(600);
+//    tone(piezo_pin, note_Ab4, eighth_note); 
+//    delay(200);  
+//    tone(piezo_pin, note_G4, quarter_note);
+//    delay(400);
+//    tone(piezo_pin, note_F4, quarter_note);
+//    delay(400);
+//    tone(piezo_pin, note_Eb4, half_note);  
+//    delay(3000);
+//
+//  
+// 
   //PLAY YOUR SONG HERE
 }
