@@ -1,3 +1,79 @@
-body {
-    background-color: blue;
+
+.navigation{
+    background-color: #2C3E50;
+    height: 90px;
+
 }
+.projects{
+    background-color: #D0D3D4;
+    width: 900px;
+}
+
+.project{
+    padding: 50px;
+    display: inline-block;
+    width: 300px;
+}
+
+.image{
+
+    margin-bottom: 10px;
+}
+
+.text{
+    display: inline-block;
+    width: 300px;
+}
+
+.arduino{
+
+}
+
+.link{
+    padding: 10px;
+    display:inline-block;
+    font-size: 20px;
+    background-color: white;
+    margin: 20px;
+    margin-right: 50px;
+}
+
+.title{
+    padding: 50px;
+    margin-left:70px;
+    font-size: 50px;
+}
+
+.about_me{
+    display:inline-block;
+    width: 200px;
+    font-size: 13px;
+    margin-left: 1000px;
+    margin-top: -2000px;
+    background-color: #ECF0F1; 
+
+
+}
+.about_title{
+    
+}
+.prof_pic{
+    width: 80px;
+    height:80px;
+    margin: 40px;
+}
+
+.bio {
+    margin:30px;
+}
+.prof_pic img{
+    width: 100%;
+    height: auto;
+}
+
+
+.skills {
+    background-color: #ECF0F1;
+    display: inline-block;
+}
+
