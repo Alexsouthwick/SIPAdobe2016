@@ -6,6 +6,8 @@
 }
 .projects{
     background-color: #D0D3D4;
+    border-radius: 2%;
+    border: 1px solid #021a40;
     width: 900px;
 }
 
@@ -15,9 +17,11 @@
     width: 300px;
 }
 
-.image{
 
+.image img{
+    border-radius: 20%;
     margin-bottom: 10px;
+    border: 2px solid #021a40;
 }
 
 .text{
@@ -25,8 +29,17 @@
     width: 300px;
 }
 
-.arduino{
+#pygame_img{
+    width: 200px;
+    height:200px;
+}
 
+#pygame_img img{
+    width: 100%;
+    height: 100%;
+}
+#pygame {
+    padding-top: -200px;
 }
 
 .link{
@@ -36,12 +49,26 @@
     background-color: white;
     margin: 20px;
     margin-right: 50px;
+    border-radius: 10%;
+}
+
+.link a{
+    text-decoration: none;
+    color: #021a40;
 }
 
 .title{
-    padding: 50px;
-    margin-left:70px;
+    padding-left: 70px;
+    margin-left:100px;
     font-size: 50px;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    background-color: #F2F4F4;
+    width: 700px;
+    height: 70px;
+    padding-top: 10px;
+    padding-right: -50px;
+    margin:30px;
+
 }
 
 .about_me{
@@ -55,25 +82,32 @@
 
 }
 .about_title{
+    margin-left: 60px;
+    padding-top: 20px;
     
 }
 .prof_pic{
-    width: 80px;
-    height:80px;
-    margin: 40px;
+    width: 90px;
+    height:90px;
+    margin: 20px;
+    margin-left: 50px;
 }
 
 .bio {
     margin:30px;
 }
 .prof_pic img{
+    border-radius: 50%;
     width: 100%;
     height: auto;
+    border: 2px solid #021a40;
+
 }
 
 
 .skills {
     background-color: #ECF0F1;
     display: inline-block;
+    margin-left: 1000px;
+    margin-top: 100px;
 }
-
